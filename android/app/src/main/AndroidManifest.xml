@@ -2,7 +2,7 @@
     <application
         android:label="valorant"
         android:name="${applicationName}"
-        android:icon="@mipmap/launch_ic">
+        android:icon="@mipmap/launcher_ic">
         <activity
             android:name=".MainActivity"
             android:exported="true"

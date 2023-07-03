@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:valorant/presentation/screens/home_screen.dart';
-import 'package:valorant/presentation/screens/splashe_screen.dart';
+import 'package:valorant/presentation/screens/splash_screen.dart';
 
 import 'blocs/agent_bloc/agent_bloc.dart';
 import 'blocs/agent_selection_bloc/agent_selection_bloc.dart';

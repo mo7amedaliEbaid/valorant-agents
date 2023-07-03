@@ -10,6 +10,7 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: SplashBody(),
     );
   }
@@ -46,8 +47,33 @@ class _SplashBodyState extends State<SplashBody>
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.sizeOf(context);
-    return Lottie.asset("assets/lotties/fire-ball.json",
-        height: size.height, width: size.width, fit: BoxFit.fill);
+    return Stack(
+      children: [
+        Container(
+            height: size.height,
+            width: size.width,
+            margin: EdgeInsets.only(top: size.height*.05),
+            // color: Colors.black,
+            child: Image.asset(
+              "assets/images/splash1.jpg",
+              fit: BoxFit.fill,
+            )),
+        Lottie.asset("assets/lotties/fire-ball.json",
+            height: size.height, width: size.width, fit: BoxFit.fill),
+        Positioned(
+          bottom: size.height*.1,
+          left: size.width*.22,
+          child: FadeTransition(
+            opacity: fadingAnimation!,
+            child: Text(
+              'Valorant',
+              style: TextStyle(
+                  color: Colors.red, fontSize: 40, fontFamily: 'Valorant',fontWeight: FontWeight.bold),
+            ),
+          ),
+        ),
+      ],
+    );
   }
 
   void goToNextView(BuildContext context) {
