@@ -45,36 +45,14 @@ class _SplashBodyState extends State<SplashBody>
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          Spacer(),
-          FadeTransition(
-            opacity: fadingAnimation!,
-            child: Text(
-              'Valorant',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 30,
-              ),
-            ),
-          ),
-          Spacer(),
-          Lottie.asset("assets/lotties/fire-ball.json", height: 500),
-          /*     Image.asset(
-            '${AppConstants.splash_image}',
-            fit: BoxFit.cover,
-            height: 300,
-          ),*/
-          Spacer(),
-        ],
-      ),
-    );
+    Size size = MediaQuery.sizeOf(context);
+    return Lottie.asset("assets/lotties/fire-ball.json",
+        height: size.height, width: size.width, fit: BoxFit.fill);
   }
 
   void goToNextView(BuildContext context) {
-    Future.delayed(Duration(seconds: 2), () {
-     push(context: context,widget: HomeScreen());
+    Future.delayed(Duration(seconds: 20), () {
+      push(context: context, widget: HomeScreen());
     });
   }
 }
