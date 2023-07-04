@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:just_audio/just_audio.dart';
 import 'package:valorant/presentation/screens/home_screen.dart';
 import 'package:valorant/presentation/screens/splash_screen.dart';
 
@@ -11,8 +12,10 @@ import 'blocs/network_bloc/network_event.dart';
 import 'data/repositories/agent_repository_impl.dart';
 import 'domain/entities/agent_model.dart';
 import 'domain/usecases/agent_usecase_interface.dart';
+AudioPlayer? player;
 
 void main() {
+  player = AudioPlayer();
   final agentRepository = AgentRepositoryImplimentation();
   final agentUseCase = AgentUseCase(agentRepository: agentRepository);
 
