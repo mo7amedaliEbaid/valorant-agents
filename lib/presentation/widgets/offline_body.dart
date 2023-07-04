@@ -8,7 +8,7 @@ Widget offlinewidget(BuildContext context){
           fit: BoxFit.fill, height: size.height, width: size.width),
       Positioned(
           bottom: size.height*.07,
-          left: size.width*.12,
+          left:size.width<480? size.width*.12:size.width*.28,
           child: Text(
             'You Are Offline!',
             style: TextStyle(

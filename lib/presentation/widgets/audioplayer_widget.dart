@@ -20,73 +20,69 @@ class _AudioPlayersState extends State<AudioPlayers> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.sizeOf(context);
-    log(size.width.toString());
+  //  log(size.width.toString());
     return Container(
       padding: EdgeInsets.all(8),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              IconButton(
-                  onPressed: () {
-                    player!.setAsset('assets/music/valorant.mp3').then((value) {
-                      return {
-                        _position = value!,
-                        player!.playerStateStream.listen((state) {
-                          if (state.playing) {
+          IconButton(
+              onPressed: () {
+                player!.setAsset('assets/music/valorant.mp3').then((value) {
+                  return {
+                    _position = value!,
+                    player!.playerStateStream.listen((state) {
+                      if (state.playing) {
+                        setState(() {
+                          _progress = .1;
+                        });
+                      } else
+                        switch (state.processingState) {
+                          case ProcessingState.idle:
+                            break;
+                          case ProcessingState.loading:
+                            break;
+                          case ProcessingState.buffering:
+                            break;
+                          case ProcessingState.ready:
                             setState(() {
-                              _progress = .1;
+                              _progress = 0;
+                              //  timer2!.cancel();
                             });
-                          } else
-                            switch (state.processingState) {
-                              case ProcessingState.idle:
-                                break;
-                              case ProcessingState.loading:
-                                break;
-                              case ProcessingState.buffering:
-                                break;
-                              case ProcessingState.ready:
-                                setState(() {
-                                  _progress = 0;
-                                  //  timer2!.cancel();
-                                });
-                                break;
-                              case ProcessingState.completed:
-                                setState(() {
-                                  _progress = 0;
-                                });
-                                break;
-                            }
-                        }),
-                        player!.play(),
-                      };
-                    });
-                  },
-                  icon: Icon(
-                    _progress > 0 ? Icons.pause : Icons.play_circle_fill,
-                    size: 45,
-                  )),
-              Text(size.width.toString()),
-              IconButton(
-                  onPressed: () {
-                    setState(() {
-                      player!.stop();
-                    });
-                  },
-                  icon: Icon(
-                    Icons.stop,
-                    size: 45,
-                  )),
-              _progress > 0
-                  ? SpinKitWave(
-                      color: Colors.yellow,
-                      size: 50,
-                    )
-                  : Icon(Icons.music_off_sharp),
-            ],
-          ),
+                            break;
+                          case ProcessingState.completed:
+                            setState(() {
+                              _progress = 0;
+                            });
+                            break;
+                        }
+                    }),
+                    player!.play(),
+                  };
+                });
+              },
+              icon: Icon(
+                _progress > 0 ? Icons.pause : Icons.play_circle_fill,
+                size: 35,color: Colors.purple,
+              )),
+          _progress > 0
+              ? SpinKitWave(
+            color: Colors.orange.shade800,
+            size: 50,
+          )
+              : Icon(Icons.music_off_sharp,size: 40,color: Colors.red.shade900,),
+          IconButton(
+              onPressed: () {
+                setState(() {
+                  player!.stop();
+                });
+              },
+              icon: Icon(
+                Icons.stop,
+                size: 40,
+                color: Colors.purple,
+              )),
+
         ],
       ),
     );

@@ -77,8 +77,8 @@ class _SplashBodyState extends State<SplashBody>
   }
 
   void goToNextView(BuildContext context) {
-    Future.delayed(Duration(seconds: 2), () {
-      push(context: context, widget: HomeScreen());
+    Future.delayed(Duration(seconds: 10), () {
+      pushRemove(context: context, widget: HomeScreen());
     });
   }
 }
