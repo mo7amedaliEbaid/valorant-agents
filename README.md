@@ -19,14 +19,14 @@ and a lot of animation widgets.
 
 <p align="center">
   <img 
-    width=100%
+    width=50%
     height=40%
     src="https://github.com/mo7amedaliEbaid/valorant-agents/blob/16c3515f2f91c76f68cadc5b9c1725cbff38158d/valorant_screenshots/home_transformed.jpg">
 </p>
 
 <p align="center">
   <img 
-    width=100%
+    width=50%
     height=40%
     src="https://github.com/mo7amedaliEbaid/valorant-agents/blob/16c3515f2f91c76f68cadc5b9c1725cbff38158d/valorant_screenshots/lottie_splash.jpg">
 </p>
