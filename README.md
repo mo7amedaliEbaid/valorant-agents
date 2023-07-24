@@ -33,7 +33,7 @@ and a lot of animation widgets.
 
 ✔️ More Pictures https://github.com/mo7amedaliEbaid/valorant-agents/blob/16c3515f2f91c76f68cadc5b9c1725cbff38158d/valorant_screenshots <br />
 
-✔️ Video https://github.com/mo7amedaliEbaid/valorant-agents/blob/16c3515f2f91c76f68cadc5b9c1725cbff38158d/video <br />
+✔️ Video https://www.linkedin.com/posts/mo7amedebaid_animation-flutter-bloc-activity-7082577230278606848-T05X?utm_source=share&utm_medium=member_desktop <br />
 
 
 ## Dependencies
