@@ -1,21 +1,22 @@
 # valorant
+  This flutter app is about VALORANT "video game".  
 
-For the sake of loving flutter animations ,      
-I developed this flutter app about VALORANT "video game",    
-I used Bloc Statemanagement    
-and a lot of animation widgets.
 
-## State Management
+### State Management
 ✔️ Bloc <br />
 
-## Some Features
+### Some Features
 
 ✔️ Responsive Ui <br />
 ✔️ Flutter Animations <br />
 ✔️ Audio Playing <br />
 ✔️ Online/Offline  <br />
 
-# Pictures:
+
+### Demo Video
+<a href="https://youtu.be/4Wr72-XYNAs?si=2tH1nqYyaoasXb32"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/2560px-Logo_of_YouTube_%282015-2017%29.svg.png" width="170"></img></a>
+
+### Screenshots
 
 <p align="center">
   <img 
@@ -31,12 +32,11 @@ and a lot of animation widgets.
     src="https://github.com/mo7amedaliEbaid/valorant-agents/blob/16c3515f2f91c76f68cadc5b9c1725cbff38158d/valorant_screenshots/lottie_splash.jpg">
 </p>
 
-✔️ More Pictures https://github.com/mo7amedaliEbaid/valorant-agents/blob/16c3515f2f91c76f68cadc5b9c1725cbff38158d/valorant_screenshots <br />
+✔️ More screenshots [Here](https://github.com/mo7amedaliEbaid/valorant-agents/blob/16c3515f2f91c76f68cadc5b9c1725cbff38158d/valorant_screenshots)
 
-✔️ Video https://www.linkedin.com/posts/mo7amedebaid_animation-flutter-bloc-activity-7082577230278606848-T05X?utm_source=share&utm_medium=member_desktop <br />
+<br />
 
-
-## Dependencies
+### Dependencies
   equatable:      
   flutter_bloc:      
   http:      
